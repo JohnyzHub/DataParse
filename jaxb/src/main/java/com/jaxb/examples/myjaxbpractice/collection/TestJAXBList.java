@@ -11,10 +11,17 @@ import java.util.List;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 
 public class TestJAXBList {
 
 	public static void main(String[] args) {
+		TestJAXBList jaxbList = new TestJAXBList();
+		jaxbList.marshaller();
+		jaxbList.unMarshaller();
+	}
+
+	public void marshaller() {
 		Employee emp1 = new Employee();
 		emp1.setName("JOHNY");
 		emp1.setNumber(1);
@@ -41,7 +48,6 @@ public class TestJAXBList {
 		JAXBContext context = null;
 		Marshaller marshaller = null;
 		try {
-
 			Path path = Paths.get("resources\\Employees.txt");
 			Files.deleteIfExists(path);
 			context = JAXBContext.newInstance(Employees.class);
@@ -53,7 +59,18 @@ public class TestJAXBList {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
+	public void unMarshaller() {
+		JAXBContext context = null;
+		Unmarshaller unMarshaller = null;
+		try {
+			context = JAXBContext.newInstance(Employees.class);
+			unMarshaller = context.createUnmarshaller();
+			Employees employees = (Employees) unMarshaller.unmarshal(new File("resources\\Employees.txt"));
+			System.out.println("Employees: \n" + employees);
+		} catch (JAXBException e) {
+			e.printStackTrace();
+		}
+	}
 }
