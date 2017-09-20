@@ -44,4 +44,8 @@ public class Employee {
 		this.name = name;
 	}
 
+	@Override
+	public String toString() {
+		return "\nEmployee [number=" + number + ", name=" + name + ", employeeList=" + employeeList + "]";
+	}
 }

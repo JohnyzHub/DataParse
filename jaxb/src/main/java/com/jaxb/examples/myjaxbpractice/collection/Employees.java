@@ -23,4 +23,8 @@ public class Employees {
 		this.employees = employees;
 	}
 
+	@Override
+	public String toString() {
+		return "Employees [" + employees + "]";
+	}
 }
