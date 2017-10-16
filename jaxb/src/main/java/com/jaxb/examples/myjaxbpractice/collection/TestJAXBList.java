@@ -53,6 +53,7 @@ public class TestJAXBList {
 			context = JAXBContext.newInstance(Employees.class);
 			marshaller = context.createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+			System.out.println("Marshall::\n");
 			marshaller.marshal(empss, System.out);
 			marshaller.marshal(empss, new File("resources\\Employees.txt"));
 		} catch (IOException | JAXBException e) {
@@ -68,7 +69,7 @@ public class TestJAXBList {
 			context = JAXBContext.newInstance(Employees.class);
 			unMarshaller = context.createUnmarshaller();
 			Employees employees = (Employees) unMarshaller.unmarshal(new File("resources\\Employees.txt"));
-			System.out.println("Employees: \n" + employees);
+			System.out.println("\nUnmarshall::\n\nEmployees: \n" + employees);
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
