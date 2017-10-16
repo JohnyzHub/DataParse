@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<order id="1234" date="2013-06-05T09:30:10.5">
+  <content>
+    <order_line item="H2G2" quantity="1">
+      <unit_price>23.5</unit_price>
+    </order_line>
+    <order_line item="Harry Potter" quantity="2">
+      <unit_price>34.99</unit_price>
+    </order_line>
+	<order_line item="Matrix" quantity="4">
+      <unit_price>37.99</unit_price>
+    </order_line>
+	<order_line item="Iron_Man" quantity="2">
+      <unit_price>44.99</unit_price>
+    </order_line>	
+  </content>
+</order>
