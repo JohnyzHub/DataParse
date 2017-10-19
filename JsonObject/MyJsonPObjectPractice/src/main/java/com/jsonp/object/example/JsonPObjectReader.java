@@ -16,28 +16,13 @@ import javax.json.JsonReader;
 public class JsonPObjectReader {
 
 	public static void main(String[] args) {
+		JsonPObjectReader objectReader = new JsonPObjectReader();
 
-		File inputFile = Paths.get("src/main/resources/order.json").toFile();
-		if (!inputFile.exists()) {
-			System.out.println("order.json file doesn't exist");
-			return;
-		}
-
-		JsonObject jsonObject = null;
-		try (InputStream inStream = new FileInputStream(inputFile);
-				JsonReader jsonReader = Json.createReader(inStream);) {
-			jsonObject = jsonReader.readObject();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return;
-		}
-
+		JsonObject jsonObject = objectReader.readJsonObjectFromFile();
 		int id = Integer.valueOf(jsonObject.getString("@id"));
 		String date = jsonObject.getString("@date");
 		System.out.println("{@id - " + id + "@date - " + date + ", ");
 
-		JsonPObjectReader objectReader = new JsonPObjectReader();
 		JsonObject customer = jsonObject.getJsonObject("customer");
 		objectReader.readCustomer(customer);
 
@@ -47,6 +32,25 @@ public class JsonPObjectReader {
 		JsonObject creditCard = jsonObject.getJsonObject("credit_card");
 		objectReader.readCreditCart(creditCard);
 
+	}
+
+	public JsonObject readJsonObjectFromFile() {
+		JsonObject jsonObject = null;
+		File inputFile = Paths.get("src/main/resources/order.json").toFile();
+		if (!inputFile.exists()) {
+			System.out.println("order.json file doesn't exist");
+			return jsonObject;
+		}
+
+		try (InputStream inStream = new FileInputStream(inputFile);
+				JsonReader jsonReader = Json.createReader(inStream);) {
+			jsonObject = jsonReader.readObject();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return jsonObject;
+		}
+		return jsonObject;
 	}
 
 	public void readCustomer(JsonObject customer) {
