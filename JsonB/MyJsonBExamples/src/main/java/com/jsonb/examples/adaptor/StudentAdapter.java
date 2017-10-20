@@ -6,7 +6,7 @@ import javax.json.bind.adapter.JsonbAdapter;
 
 import com.jsonb.examples.Student;
 
-public class StudentAdaptor implements JsonbAdapter<Student, JsonObject> {
+public class StudentAdapter implements JsonbAdapter<Student, JsonObject> {
 
 	@Override
 	public JsonObject adaptToJson(Student student) throws Exception {
