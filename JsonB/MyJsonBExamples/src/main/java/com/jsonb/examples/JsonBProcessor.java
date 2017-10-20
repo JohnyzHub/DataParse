@@ -15,7 +15,7 @@ import javax.json.bind.JsonbConfig;
 import javax.json.bind.JsonbException;
 import javax.json.bind.config.PropertyOrderStrategy;
 
-import com.jsonb.examples.adaptor.StudentAdaptor;
+import com.jsonb.examples.adaptor.StudentAdapter;
 
 public class JsonBProcessor {
 
@@ -57,7 +57,7 @@ public class JsonBProcessor {
 		StudentList resultedStudentList = jsonB.fromJson(studentListJson, StudentList.class);
 		System.out.println("Deserialized List: " + resultedStudentList);
 
-		JsonbConfig jsonAdaptConfig = new JsonbConfig().withAdapters(new StudentAdaptor()).withFormatting(true);
+		JsonbConfig jsonAdaptConfig = new JsonbConfig().withAdapters(new StudentAdapter()).withFormatting(true);
 		Jsonb jsonBAdapt = JsonbBuilder.create(jsonAdaptConfig);
 		File adaptorFile = getAdaptorFile();
 		try (OutputStream outStream = new FileOutputStream(adaptorFile)) {
