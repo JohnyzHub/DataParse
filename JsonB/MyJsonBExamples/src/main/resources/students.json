@@ -1,0 +1,17 @@
+
+{
+    "students": [
+        {
+            "id": 1,
+            "firstName": "FirstName1",
+            "lastName": "LastName1",
+            "grade": "Graduation"
+        },
+        {
+            "id": 2,
+            "firstName": "FirstName2",
+            "lastName": "LastName2",
+            "grade": "Post-Graduation"
+        }
+    ]
+}
