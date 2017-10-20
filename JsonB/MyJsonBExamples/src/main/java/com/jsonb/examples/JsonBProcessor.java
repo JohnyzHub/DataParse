@@ -15,7 +15,7 @@ import javax.json.bind.JsonbConfig;
 import javax.json.bind.JsonbException;
 import javax.json.bind.config.PropertyOrderStrategy;
 
-import com.jsonb.examples.adaptor.StudentAdapter;
+import com.jsonb.examples.adapter.StudentAdapter;
 
 public class JsonBProcessor {
 
@@ -59,16 +59,16 @@ public class JsonBProcessor {
 
 		JsonbConfig jsonAdaptConfig = new JsonbConfig().withAdapters(new StudentAdapter()).withFormatting(true);
 		Jsonb jsonBAdapt = JsonbBuilder.create(jsonAdaptConfig);
-		File adaptorFile = getAdaptorFile();
-		try (OutputStream outStream = new FileOutputStream(adaptorFile)) {
+		File adapterFile = getAdapterFile();
+		try (OutputStream outStream = new FileOutputStream(adapterFile)) {
 			jsonBAdapt.toJson(studentList, outStream);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		String studentsListWithAdaptor = jsonBAdapt.toJson(studentList);
-		StudentList resultWithAdaptor = jsonBAdapt.fromJson(studentsListWithAdaptor, StudentList.class);
-		System.out.println("Deserialized List with Adaptor: " + resultWithAdaptor);
+		String studentsListWithAdapter = jsonBAdapt.toJson(studentList);
+		StudentList resultWithAdapter = jsonBAdapt.fromJson(studentsListWithAdapter, StudentList.class);
+		System.out.println("Deserialized List with Adapter: " + resultWithAdapter);
 	}
 
 	public static File getFile() {
@@ -79,8 +79,8 @@ public class JsonBProcessor {
 		return jsonFile;
 	}
 
-	public static File getAdaptorFile() {
-		File jsonFile = Paths.get("src/main/resources/WithAdaptor_Students.json").toFile();
+	public static File getAdapterFile() {
+		File jsonFile = Paths.get("src/main/resources/WithAdapter_Students.json").toFile();
 		if (jsonFile.exists()) {
 			jsonFile.delete();
 		}
