@@ -8,18 +8,18 @@
 
         Org.w3.sax				Interfaces used for the SAX parser
 
-        javax.xml.parsers 			Common interface to DOM and SAX
+        javax.xml.parsers			Common interface to DOM and SAX
 
-        javax.xml.bind			        Runtime binding framework including marshalling,
-                                                	unmarshalling and validation capabilities.
+        javax.xml.bind			Runtime binding framework including marshalling,
+						unmarshalling and validation capabilities.
         javax.xml.transform			XSLT API to transform xml to other forms.
 
         javax.jason				Provides an API to describe JSON data structure
-                                                 and provides the entry point to build, parse,
-                                                 read and write json objects and arrays by streaming
+                                               and provides the entry point to build, parse,
+                                               read and write json objects and arrays by streaming
 
-        javax.json.spi				Service provider interface(SPI) to plug JsonParser
-                                                  and JsonGenerator implementations.
+        javax.json.spi			Service provider interface(SPI) to plug JsonParser
+						and JsonGenerator implementations.
 
         Javax.json.stream			Provides streaming API to parse and generate Json
 
@@ -31,7 +31,7 @@
             System Property				     Description
           ---------------------------------		---------------------------------------
           javax.xml.parsers.DocumentBuilderFactory	Sets DOM builder
-          javax.xml.parsers.SAXParserFactory		Configures SAX Parser
+          javax.xml.parsers.SAXParserFactory	Configures SAX Parser
           javax.xml.transform.TransformerFactory	Defines which XSLT implementation to use.
 
 
@@ -82,10 +82,10 @@ Check: https://docs.oracle.com/cd/E17802_01/webservices/webservices/docs/1.6/tut
                                                     and provides the entry point to build, parse, 
                                                     read and write json objects and arrays by streaming
 
-          javax.json.spi			Service provider interface(SPI) to plug JsonParser 
-                                                   and JsonGenerator implementations.
+          javax.json.spi				Service provider interface(SPI) to plug JsonParser
+	  						and JsonGenerator implementations.
 
-          Javax.json.stream			Provides streaming API to parse and generate Json
+          Javax.json.stream				Provides streaming API to parse and generate Json.
 
         JSON-P has methods to create 
           JsonObjectBuilder  –  Builds Json objects.
