@@ -2,37 +2,37 @@
 -----------------------------------------------------------------------
                 
 
-          Package				                              Description
+          Package				Description
         -----------------------------		----------------------------------------
-        Org.w3.dom				                    Generic DOM API for java
+        Org.w3.dom				Generic DOM API for java
 
-        Org.w3.sax				                    Interfaces used for the SAX parser
+        Org.w3.sax				Interfaces used for the SAX parser
 
-        javax.xml.parsers 			              Common interface to DOM and SAX
+        javax.xml.parsers 			Common interface to DOM and SAX
 
-        javax.xml.bind			                  Runtime binding framework including marshalling,
-                                                unmarshalling and validation capabilities.
-        javax.xml.transform			              XSLT API to transform xml to other forms.
+        javax.xml.bind			        Runtime binding framework including marshalling,
+                                                	unmarshalling and validation capabilities.
+        javax.xml.transform			XSLT API to transform xml to other forms.
 
-        javax.jason				                    Provides an API to describe JSON data structure
-                                                      and provides the entry point to build, parse,
-                                                      read and write json objects and arrays by streaming
+        javax.jason				Provides an API to describe JSON data structure
+                                                 and provides the entry point to build, parse,
+                                                 read and write json objects and arrays by streaming
 
-        javax.json.spi				                Service provider interface(SPI) to plug JsonParser
+        javax.json.spi				Service provider interface(SPI) to plug JsonParser
                                                   and JsonGenerator implementations.
 
-        Javax.json.stream			                Provides streaming API to parse and generate Json
+        Javax.json.stream			Provides streaming API to parse and generate Json
 
 
 
     	Marshalling – Transforming the java object into and xml document.
 	    UnMarshalling – Transforming XML document into object and optionally validates the Xml.
 
-            System Property				                        	Description
-          ---------------------------------				    ---------------------------------------
-          javax.xml.parsers.DocumentBuilderFactory		Sets DOM builder
-          javax.xml.parsers.SAXParserFactory		      Configures SAX Parser
-          javax.xml.transform.TransformerFactory		  Defines which XSLT implementation to use.
+            System Property				     Description
+          ---------------------------------		---------------------------------------
+          javax.xml.parsers.DocumentBuilderFactory	Sets DOM builder
+          javax.xml.parsers.SAXParserFactory		Configures SAX Parser
+          javax.xml.transform.TransformerFactory	Defines which XSLT implementation to use.
 
 
 The key advantage of XML data format is the ability to transform the xml document from one vocabulary to another.
@@ -48,8 +48,8 @@ The key advantage of XML data format is the ability to transform the xml documen
             using expressions.
             Visit - https://examples.javacodegeeks.com/core-java/xml/xpath/java-xpath-examples/
 
-    XSLT: eXtensible Stylesheet Language Transformations provides framework to transform the structure 	
-            of XML document by combining it with XSL stylesheet to produce an output document.
+    XSLT: eXtensible Stylesheet Language Transformations provides framework to transform the structure
+    		of XML document by combining it with XSL stylesheet to produce an output document.
 
     StAX: Steaming API for XML provides implementation for processing XML file 
                                   i.e. both read and write based on push API. 
@@ -58,9 +58,9 @@ The key advantage of XML data format is the ability to transform the xml documen
               and 	Cursor based API: Allows the application to process xml one point at a time 
                                         in forward direction only. 
 
-	Check: https://docs.oracle.com/cd/E17802_01/webservices/webservices/docs/1.6/tutorial/doc/SJSXP3.html
-  http://tutorials.jenkov.com/java-xml/sax-vs-stax.html
-  https://www.journaldev.com/1240/java-xml-parser
+Check: https://docs.oracle.com/cd/E17802_01/webservices/webservices/docs/1.6/tutorial/doc/SJSXP3.html
+		  http://tutorials.jenkov.com/java-xml/sax-vs-stax.html
+		  https://www.journaldev.com/1240/java-xml-parser
 				
 
                                             JSON
@@ -78,14 +78,14 @@ The key advantage of XML data format is the ability to transform the xml documen
             Package				                      Description
           -----------------------------		----------------------------------------
 
-          javax.jason				                  Provides an API to describe JSON data structure 
+          javax.jason				Provides an API to describe JSON data structure 
                                                     and provides the entry point to build, parse, 
                                                     read and write json objects and arrays by streaming
 
-          javax.json.spi				              Service provider interface(SPI) to plug JsonParser 
+          javax.json.spi			Service provider interface(SPI) to plug JsonParser 
                                                    and JsonGenerator implementations.
 
-          Javax.json.stream			              Provides streaming API to parse and generate Json
+          Javax.json.stream			Provides streaming API to parse and generate Json
 
         JSON-P has methods to create 
           JsonObjectBuilder  –  Builds Json objects.
@@ -97,4 +97,4 @@ The key advantage of XML data format is the ability to transform the xml documen
           JsonReader – Reads Json data from a resource.
 
 
-      For JSON-B check the official documentation: http://json-b.net/users-guide.html   
+    For JSON-B check the official documentation: http://json-b.net/users-guide.html   
