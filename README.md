@@ -58,9 +58,10 @@ The key advantage of XML data format is the ability to transform the xml documen
               and 	Cursor based API: Allows the application to process xml one point at a time 
                                         in forward direction only. 
 
-Check: https://docs.oracle.com/cd/E17802_01/webservices/webservices/docs/1.6/tutorial/doc/SJSXP3.html
-	http://tutorials.jenkov.com/java-xml/sax-vs-stax.html  
-	https://www.journaldev.com/1240/java-xml-parser
+Check:
+https://docs.oracle.com/cd/E17802_01/webservices/webservices/docs/1.6/tutorial/doc/SJSXP3.html
+http://tutorials.jenkov.com/java-xml/sax-vs-stax.html  
+https://www.journaldev.com/1240/java-xml-parser
 				
 
                                             JSON
